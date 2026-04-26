@@ -10,15 +10,22 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
+              with:
+                  # 未指定だと default ブランチが取られ、リリースしたタグと中身がズレる
+                  ref: ${{ github.event.release.tag_name }}
             - uses: denoland/setup-deno@v2
               with:
                   deno-version: v2.x
             - run: deno install
             - run: deno task build
             - run: deno task plugin-zip
+            - name: Verify zip
+              run: test -f cdn-error-mockups.zip && ls -la cdn-error-mockups.zip
             - name: Upload zip to release
-              uses: softprops/action-gh-release@v2
-              with:
-                  files: cdn-error-mockups.zip
+              # softprops/action-gh-release は release 発火と組み合わせた際に
+              # 期待どおり紐づかない場合があるため、gh CLI で同一タグのリリースへ直接添付する
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: |
+                  gh release upload "${{ github.event.release.tag_name }}" \
+                    cdn-error-mockups.zip --clobber
