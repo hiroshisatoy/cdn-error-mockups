@@ -5,6 +5,10 @@
 	"author": "Hiroshi Sato",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
+	"scripts": {
+		"build": "wp-scripts build",
+		"plugin-zip": "wp-scripts plugin-zip"
+	},
 	"dependencies": {
 		"@wordpress/block-editor": "^15.12.0",
 		"@wordpress/blocks": "^15.12.0",

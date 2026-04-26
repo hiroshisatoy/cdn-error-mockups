@@ -1,0 +1,24 @@
+name: Release plugin zip
+on:
+    release:
+        types: [published]
+permissions:
+    contents: write
+jobs:
+    zip:
+        name: Build and attach zip
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - uses: denoland/setup-deno@v2
+              with:
+                  deno-version: v2.x
+            - run: deno install
+            - run: deno task build
+            - run: deno task plugin-zip
+            - name: Upload zip to release
+              uses: softprops/action-gh-release@v2
+              with:
+                  files: cdn-error-mockups.zip
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
