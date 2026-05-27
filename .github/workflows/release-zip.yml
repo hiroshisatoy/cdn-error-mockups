@@ -1,7 +1,8 @@
 name: Release plugin zip
 on:
-    release:
-        types: [published]
+    push:
+        tags:
+            - 'v*'
 permissions:
     contents: write
 jobs:
@@ -11,8 +12,7 @@ jobs:
         steps:
             - uses: actions/checkout@v4
               with:
-                  # 未指定だと default ブランチが取られ、リリースしたタグと中身がズレる
-                  ref: ${{ github.event.release.tag_name }}
+                  ref: ${{ github.ref }}
             - uses: denoland/setup-deno@v2
               with:
                   deno-version: v2.x
@@ -21,11 +21,13 @@ jobs:
             - run: deno task plugin-zip
             - name: Verify zip
               run: test -f cdn-error-mockups.zip && ls -la cdn-error-mockups.zip
-            - name: Upload zip to release
-              # softprops/action-gh-release は release 発火と組み合わせた際に
-              # 期待どおり紐づかない場合があるため、gh CLI で同一タグのリリースへ直接添付する
+            - name: Create or update GitHub Release
               env:
                   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
-                  gh release upload "${{ github.event.release.tag_name }}" \
-                    cdn-error-mockups.zip --clobber
+                  TAG="${{ github.ref_name }}"
+                  if gh release view "$TAG" >/dev/null 2>&1; then
+                    gh release upload "$TAG" cdn-error-mockups.zip --clobber
+                  else
+                    gh release create "$TAG" cdn-error-mockups.zip --generate-notes --title "$TAG"
+                  fi
