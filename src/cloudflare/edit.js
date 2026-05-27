@@ -8,7 +8,7 @@ import {
 import apiFetch from '@wordpress/api-fetch';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { useState } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
+import { __, _x } from '@wordpress/i18n';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -85,7 +85,11 @@ export default function Edit({ attributes, setAttributes }) {
 						__nextHasNoMarginBottom={true}
 					/>
 					<TextControl
-						label={__('Error Code', 'cdn-error-mockups')}
+						label={_x(
+							'Error code',
+							'Inspector control label for editing HTTP error code',
+							'cdn-error-mockups'
+						)}
 						value={errorCode}
 						onChange={(value) =>
 							setAttributes({ errorCode: value })
@@ -293,7 +297,11 @@ export default function Edit({ attributes, setAttributes }) {
 						<h1 className="inline-block sm:block sm:mb-2 font-light text-60 lg:text-4xl text-black-dark leading-tight mr-2">
 							<span className="inline-block">{title}</span>{' '}
 							<span className="code-label">
-								{__('Error code', 'cdn-error-mockups')}{' '}
+								{_x(
+									'Error code',
+									'Inline label shown in the block mockup header',
+									'cdn-error-mockups'
+								)}{' '}
 								{errorCode}
 							</span>
 						</h1>

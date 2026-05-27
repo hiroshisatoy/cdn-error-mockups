@@ -5,7 +5,7 @@
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
 import { useBlockProps } from '@wordpress/block-editor';
-import { __ } from '@wordpress/i18n';
+import { __, _x } from '@wordpress/i18n';
 
 /**
  * The save function defines the way in which the different attributes should
@@ -47,7 +47,11 @@ export default function save({ attributes }) {
 						<h1 className="inline-block sm:block sm:mb-2 font-light text-60 lg:text-4xl text-black-dark leading-tight mr-2">
 							<span className="inline-block">{title}</span>{' '}
 							<span className="code-label">
-								{__('Error code', 'cdn-error-mockups')}{' '}
+								{_x(
+									'Error code',
+									'Inline label shown in the block mockup header',
+									'cdn-error-mockups'
+								)}{' '}
 								{errorCode}
 							</span>
 						</h1>
