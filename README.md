@@ -4,7 +4,7 @@ Donate link: https://github.com/sponsors/sato-jp
 Tags: block, cloudflare, joke, 404  
 Requires at least: 6.9  
 Tested up to: 6.9  
-Stable tag: 1.0.4
+Stable tag: 1.1.0
 Requires PHP: 8.0  
 License: GPLv2 or later  
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -120,7 +120,7 @@ This is a major release. Please review the changelog for details.
 
 ## Changelog
 
-### 1.0.3
+### 1.1.0
 
 * Current stable version
 
@@ -196,11 +196,11 @@ The plugin will be automatically loaded. Make changes, rebuild with `deno task b
 To create a new release tag and push it to the remote repository:
 
 ```bash
-git tag v1.0.3
-git push origin v1.0.3
+git tag v1.1.0
+git push origin v1.1.0
 ```
 
-Replace `v1.0.3` with your desired version number.
+Replace `v1.1.0` with your desired version number.
 
 <!-- /only:github -->
 

@@ -5,6 +5,7 @@
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
 import { useBlockProps } from '@wordpress/block-editor';
+import { __ } from '@wordpress/i18n';
 
 /**
  * The save function defines the way in which the different attributes should
@@ -46,11 +47,12 @@ export default function save({ attributes }) {
 						<h1 className="inline-block sm:block sm:mb-2 font-light text-60 lg:text-4xl text-black-dark leading-tight mr-2">
 							<span className="inline-block">{title}</span>{' '}
 							<span className="code-label">
-								Error code {errorCode}
+								{__('Error code', 'cdn-error-mockups')}{' '}
+								{errorCode}
 							</span>
 						</h1>
 						<div>
-							Visit{' '}
+							{__('Visit', 'cdn-error-mockups')}{' '}
 							<a
 								href="https://www.cloudflare.com/"
 								target="_blank"
@@ -58,7 +60,7 @@ export default function save({ attributes }) {
 							>
 								cloudflare.com
 							</a>{' '}
-							for more information.
+							{__('for more information.', 'cdn-error-mockups')}
 						</div>
 						<div className="mt-3 cf-timestamp">
 							2024-01-15 10:30:45
@@ -140,13 +142,13 @@ export default function save({ attributes }) {
 						<div className="clearfix">
 							<div className="w-1/2 md:w-full float-left pr-6 md:pb-10 md:pr-0 leading-relaxed">
 								<h2 className="text-3xl font-normal leading-1.3 mb-4">
-									What happened?
+									{__('What happened?', 'cdn-error-mockups')}
 								</h2>
 								{whatHappened}
 							</div>
 							<div className="w-1/2 md:w-full float-left leading-relaxed">
 								<h2 className="text-3xl font-normal leading-1.3 mb-4">
-									What can I do?
+									{__('What can I do?', 'cdn-error-mockups')}
 								</h2>
 								{whatCanIDo}
 							</div>
@@ -156,7 +158,7 @@ export default function save({ attributes }) {
 					<div className="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">
 						<p className="text-13">
 							<span className="cf-footer-item sm:block sm:mb-1">
-								Ray ID:{' '}
+								{__('Ray ID:', 'cdn-error-mockups')}{' '}
 								<strong className="font-semibold">
 									abcdefghijklmnop
 								</strong>
@@ -166,12 +168,12 @@ export default function save({ attributes }) {
 								•{' '}
 							</span>
 							<span className="cf-footer-item sm:block sm:mb-1">
-								Your IP:{' '}
+								{__('Your IP:', 'cdn-error-mockups')}{' '}
 								<button
 									type="button"
 									className="cf-footer-ip-reveal-btn"
 								>
-									Click to reveal
+									{__('Click to reveal', 'cdn-error-mockups')}
 								</button>
 								<span className="hidden cf-footer-ip"></span>
 								<span className="cf-footer-separator sm:hidden">
@@ -181,7 +183,12 @@ export default function save({ attributes }) {
 							</span>
 
 							<span className="cf-footer-item sm:block sm:mb-1">
-								<span>Performance &amp; security by</span>{' '}
+								<span>
+									{__(
+										'Performance & security by',
+										'cdn-error-mockups'
+									)}
+								</span>{' '}
 								<a
 									rel="noopener noreferrer"
 									href="https://www.cloudflare.com/"

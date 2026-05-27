@@ -4,7 +4,7 @@ Donate link: https://github.com/sponsors/sato-jp
 Tags: block, cloudflare, joke, 404  
 Requires at least: 6.9  
 Tested up to: 6.9  
-Stable tag: 1.0.4
+Stable tag: 1.1.0
 Requires PHP: 8.0  
 License: GPLv2 or later  
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -116,7 +116,7 @@ This is a major release. Please review the changelog for details.
 
 == Changelog ==
 
-= 1.0.3 =
+= 1.1.0 =
 
 * Current stable version
 

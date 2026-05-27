@@ -1,5 +1,6 @@
 {
 	"tasks": {
+		"dev": "deno task start",
 		"start": "deno x wp-scripts start --blocks-manifest",
 		"build": "deno x wp-scripts build --blocks-manifest",
 		"env:playground": "deno x --allow-all wp-env start --runtime=playground",
@@ -12,6 +13,10 @@
 		"lint:css:fix": "deno x wp-scripts lint-style --fix",
 		"lint:js": "deno x wp-scripts lint-js",
 		"lint:js:fix": "deno x wp-scripts lint-js --fix",
+		"lint": "deno task lint:js && deno task lint:css",
+		"test:unit": "deno x wp-scripts test-unit-js",
+		"test": "deno task test:unit",
+		"check": "deno task lint && deno task build",
 		"packages-update": "deno x wp-scripts packages-update",
 		"plugin-zip": "deno x wp-scripts plugin-zip",
 		"readme": "deno run --allow-read --allow-write --allow-env @pixelium/wp-readme"

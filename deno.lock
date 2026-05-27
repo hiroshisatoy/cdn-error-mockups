@@ -4,15 +4,16 @@
     "jsr:@pixelium/wp-readme@^2.0.5": "2.0.5",
     "jsr:@std/internal@^1.0.10": "1.0.12",
     "jsr:@std/path@1": "1.1.2",
-    "npm:@wordpress/block-editor@^15.12.0": "15.12.0_react@19.2.4_react-dom@19.2.4__react@19.2.4_postcss@8.5.6",
+    "npm:@wordpress/api-fetch@^7.33.0": "7.39.0",
+    "npm:@wordpress/block-editor@^15.12.0": "15.12.0_react@19.2.4_react-dom@19.2.4__react@19.2.4",
     "npm:@wordpress/blocks@^15.12.0": "15.12.0_react@19.2.4",
     "npm:@wordpress/browserslist-config@^6.39.0": "6.39.0",
-    "npm:@wordpress/components@^32.1.0": "32.1.0_react@19.2.4_react-dom@19.2.4__react@19.2.4_@emotion+react@11.14.0__react@19.2.4",
+    "npm:@wordpress/components@^32.1.0": "32.1.0_react@19.2.4_react-dom@19.2.4__react@19.2.4",
     "npm:@wordpress/element@^6.39.0": "6.39.0_@types+react@18.3.27_react@18.3.1",
     "npm:@wordpress/env@^10.38.0": "10.39.0",
-    "npm:@wordpress/eslint-plugin@^24.1.0": "24.1.0_@babel+core@7.25.7_eslint@8.57.1_@typescript-eslint+parser@6.21.0__eslint@8.57.1_react@19.2.4_react-dom@19.2.4__react@19.2.4_eslint-plugin-import@2.32.0__eslint@8.57.1_@typescript-eslint+eslint-plugin@6.21.0__@typescript-eslint+parser@6.21.0___eslint@8.57.1__eslint@8.57.1_eslint-plugin-jest@27.9.0__@typescript-eslint+eslint-plugin@6.21.0___@typescript-eslint+parser@6.21.0____eslint@8.57.1___eslint@8.57.1__eslint@8.57.1__@typescript-eslint+parser@6.21.0___eslint@8.57.1__jest@29.7.0_eslint-config-prettier@8.10.2__eslint@8.57.1",
+    "npm:@wordpress/eslint-plugin@^24.1.0": "24.1.0_@babel+core@7.25.7_eslint@8.57.1_@typescript-eslint+parser@6.21.0__eslint@8.57.1_react@19.2.4_react-dom@19.2.4__react@19.2.4_stylelint@16.26.1__@csstools+css-tokenizer@3.0.4__@csstools+css-parser-algorithms@3.0.5___@csstools+css-tokenizer@3.0.4__postcss-selector-parser@7.1.1__postcss@8.5.6_eslint-plugin-import@2.32.0__eslint@8.57.1_@typescript-eslint+eslint-plugin@6.21.0__@typescript-eslint+parser@6.21.0___eslint@8.57.1__eslint@8.57.1_jest@29.7.0_eslint-plugin-jest@27.9.0__@typescript-eslint+eslint-plugin@6.21.0___@typescript-eslint+parser@6.21.0____eslint@8.57.1___eslint@8.57.1__eslint@8.57.1__jest@29.7.0__@typescript-eslint+parser@6.21.0___eslint@8.57.1_eslint-config-prettier@8.10.2__eslint@8.57.1",
     "npm:@wordpress/i18n@^6.12.0": "6.12.0",
-    "npm:@wordpress/scripts@^31.4.0": "31.4.0_@playwright+test@1.58.1_@wordpress+env@10.39.0_react@19.2.4_react-dom@19.2.4__react@19.2.4_react-refresh@0.14.2_webpack@5.104.1__acorn@8.15.0_webpack-dev-server@4.15.2__webpack@5.104.1___acorn@8.15.0__@types+express@4.17.25_@babel+core@7.25.7_eslint@8.57.1_jest@29.7.0_npm-package-json-lint@6.4.0__ajv@6.12.6_postcss@8.5.6_stylelint@16.26.1__@csstools+css-tokenizer@3.0.4__@csstools+css-parser-algorithms@3.0.5___@csstools+css-tokenizer@3.0.4__postcss-selector-parser@7.1.1__postcss@8.5.6_sass@1.97.3",
+    "npm:@wordpress/scripts@^31.4.0": "31.4.0_@wordpress+env@10.39.0_react@19.2.4_react-dom@19.2.4__react@19.2.4",
     "npm:react-dom@^19.2.4": "19.2.4_react@19.2.4",
     "npm:react@^19.2.4": "19.2.4"
   },
@@ -3877,7 +3878,8 @@
       ]
     },
     "@ungap/structured-clone@1.3.0": {
-      "integrity": "sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g=="
+      "integrity": "sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==",
+      "deprecated": true
     },
     "@unrs/resolver-binding-android-arm-eabi@1.11.1": {
       "integrity": "sha512-ppLRUgHVaGRWUx0R0Ut06Mjo9gBaBkg3v/8AxusGLhsIotbBLuRk51rAzqLC8gq6NyyAojEXglNjzf6R948DNw==",
@@ -4150,7 +4152,7 @@
     "@wordpress/blob@4.39.0": {
       "integrity": "sha512-TK3mevvKKidK/k6fROdEHF3n5tCAsnsvLRe2qasPYfhxVN1mBLFrYn506KqZgC42Xibd+fzDN3m9voldg0VeLQ=="
     },
-    "@wordpress/block-editor@15.12.0_react@19.2.4_react-dom@19.2.4__react@19.2.4_postcss@8.5.6": {
+    "@wordpress/block-editor@15.12.0_react@19.2.4_react-dom@19.2.4__react@19.2.4": {
       "integrity": "sha512-E59sSKnucc9tOMwWx7tFzjbpysc1Ob12NSF109oLMwhp/kGvtsXvxdv4NvO9BfPwoiHglSnxVfbrpdDOBujtSw==",
       "dependencies": [
         "@react-spring/web",
@@ -4264,7 +4266,7 @@
         "react-dom@19.2.4_react@19.2.4"
       ]
     },
-    "@wordpress/components@32.1.0_react@19.2.4_react-dom@19.2.4__react@19.2.4_@emotion+react@11.14.0__react@19.2.4": {
+    "@wordpress/components@32.1.0_react@19.2.4_react-dom@19.2.4__react@19.2.4": {
       "integrity": "sha512-Q4dUTWhVqV4pgW3AX9DaAwC4qsG5xiU1x9zVjo8Tm/B275hSWjumqN+spEe97T1QWx7b2RBAWK/OKVaIjkePTw==",
       "dependencies": [
         "@ariakit/react",
@@ -4338,7 +4340,7 @@
         "use-memo-one"
       ]
     },
-    "@wordpress/data@10.39.0_react@19.2.4_redux@5.0.1": {
+    "@wordpress/data@10.39.0_react@19.2.4": {
       "integrity": "sha512-L04X/Vawzx6RgvvSQga8JhvPxr1A6seBrWJoRBBP7+1zdCV7nmmR8339yTEPRnCH6m70qb0xSwTByUmTzWYzLg==",
       "dependencies": [
         "@wordpress/compose",
@@ -4375,7 +4377,7 @@
         "@wordpress/keycodes",
         "@wordpress/primitives",
         "@wordpress/private-apis",
-        "@wordpress/theme",
+        "@wordpress/theme@0.6.0_react@19.2.4_react-dom@19.2.4__react@19.2.4",
         "@wordpress/ui",
         "@wordpress/url",
         "@wordpress/warning",
@@ -4466,32 +4468,6 @@
     "@wordpress/escape-html@3.39.0": {
       "integrity": "sha512-YhAmZYQsOnnfafMwInzy/M1AR77O59u4aaIVSqiQjvCLkY+BQABsU6AizDckCg57mF2SoDnARl6xQY/7FCwEmw=="
     },
-    "@wordpress/eslint-plugin@24.1.0_@babel+core@7.25.7_eslint@8.57.1_@typescript-eslint+parser@6.21.0__eslint@8.57.1_react@19.2.4_react-dom@19.2.4__react@19.2.4_eslint-plugin-import@2.32.0__eslint@8.57.1_@typescript-eslint+eslint-plugin@6.21.0__@typescript-eslint+parser@6.21.0___eslint@8.57.1__eslint@8.57.1_eslint-plugin-jest@27.9.0__@typescript-eslint+eslint-plugin@6.21.0___@typescript-eslint+parser@6.21.0____eslint@8.57.1___eslint@8.57.1__eslint@8.57.1__@typescript-eslint+parser@6.21.0___eslint@8.57.1__jest@29.7.0_eslint-config-prettier@8.10.2__eslint@8.57.1": {
-      "integrity": "sha512-pYFV1XA2uWgryzdTB/IPF8vVO5MsduKIKBEpQFzPhvazZH5Gvc7orVpO5ZGIvkxKbFLNGmYdAUy2Cj0ng+tSdQ==",
-      "dependencies": [
-        "@babel/core",
-        "@babel/eslint-parser",
-        "@typescript-eslint/eslint-plugin",
-        "@typescript-eslint/parser",
-        "@wordpress/babel-preset-default",
-        "@wordpress/prettier-config",
-        "@wordpress/theme",
-        "cosmiconfig@7.1.0",
-        "eslint",
-        "eslint-config-prettier",
-        "eslint-import-resolver-typescript",
-        "eslint-plugin-import",
-        "eslint-plugin-jest@27.9.0_@typescript-eslint+eslint-plugin@6.21.0__@typescript-eslint+parser@6.21.0___eslint@8.57.1__eslint@8.57.1_eslint@8.57.1_@typescript-eslint+parser@6.21.0__eslint@8.57.1_jest@29.7.0",
-        "eslint-plugin-jsdoc",
-        "eslint-plugin-jsx-a11y",
-        "eslint-plugin-playwright@0.15.3_eslint@8.57.1_eslint-plugin-jest@27.9.0__@typescript-eslint+eslint-plugin@6.21.0___@typescript-eslint+parser@6.21.0____eslint@8.57.1___eslint@8.57.1__eslint@8.57.1__@typescript-eslint+parser@6.21.0___eslint@8.57.1__jest@29.7.0_@typescript-eslint+eslint-plugin@6.21.0__@typescript-eslint+parser@6.21.0___eslint@8.57.1__eslint@8.57.1_@typescript-eslint+parser@6.21.0__eslint@8.57.1",
-        "eslint-plugin-prettier",
-        "eslint-plugin-react",
-        "eslint-plugin-react-hooks",
-        "globals",
-        "requireindex"
-      ]
-    },
     "@wordpress/eslint-plugin@24.1.0_@babel+core@7.25.7_eslint@8.57.1_@typescript-eslint+parser@6.21.0__eslint@8.57.1_react@19.2.4_react-dom@19.2.4__react@19.2.4_stylelint@16.26.1__@csstools+css-tokenizer@3.0.4__@csstools+css-parser-algorithms@3.0.5___@csstools+css-tokenizer@3.0.4__postcss-selector-parser@7.1.1__postcss@8.5.6_eslint-plugin-import@2.32.0__eslint@8.57.1_@typescript-eslint+eslint-plugin@6.21.0__@typescript-eslint+parser@6.21.0___eslint@8.57.1__eslint@8.57.1_jest@29.7.0_eslint-plugin-jest@27.9.0__@typescript-eslint+eslint-plugin@6.21.0___@typescript-eslint+parser@6.21.0____eslint@8.57.1___eslint@8.57.1__eslint@8.57.1__jest@29.7.0__@typescript-eslint+parser@6.21.0___eslint@8.57.1_eslint-config-prettier@8.10.2__eslint@8.57.1": {
       "integrity": "sha512-pYFV1XA2uWgryzdTB/IPF8vVO5MsduKIKBEpQFzPhvazZH5Gvc7orVpO5ZGIvkxKbFLNGmYdAUy2Cj0ng+tSdQ==",
       "dependencies": [
@@ -4501,21 +4477,51 @@
         "@typescript-eslint/parser",
         "@wordpress/babel-preset-default",
         "@wordpress/prettier-config",
-        "@wordpress/theme",
+        "@wordpress/theme@0.6.0_react@19.2.4_react-dom@19.2.4__react@19.2.4_stylelint@16.26.1__@csstools+css-tokenizer@3.0.4__@csstools+css-parser-algorithms@3.0.5___@csstools+css-tokenizer@3.0.4__postcss-selector-parser@7.1.1__postcss@8.5.6",
         "cosmiconfig@7.1.0",
         "eslint",
         "eslint-config-prettier",
         "eslint-import-resolver-typescript",
         "eslint-plugin-import",
-        "eslint-plugin-jest@27.9.0_@typescript-eslint+eslint-plugin@6.21.0__@typescript-eslint+parser@6.21.0___eslint@8.57.1__eslint@8.57.1_eslint@8.57.1_jest@29.7.0_@typescript-eslint+parser@6.21.0__eslint@8.57.1",
+        "eslint-plugin-jest",
         "eslint-plugin-jsdoc",
         "eslint-plugin-jsx-a11y",
-        "eslint-plugin-playwright@0.15.3_eslint@8.57.1_eslint-plugin-jest@27.9.0__@typescript-eslint+eslint-plugin@6.21.0___@typescript-eslint+parser@6.21.0____eslint@8.57.1___eslint@8.57.1__eslint@8.57.1__jest@29.7.0__@typescript-eslint+parser@6.21.0___eslint@8.57.1_@typescript-eslint+eslint-plugin@6.21.0__@typescript-eslint+parser@6.21.0___eslint@8.57.1__eslint@8.57.1_jest@29.7.0_@typescript-eslint+parser@6.21.0__eslint@8.57.1",
+        "eslint-plugin-playwright",
         "eslint-plugin-prettier",
         "eslint-plugin-react",
         "eslint-plugin-react-hooks",
         "globals",
         "requireindex"
+      ]
+    },
+    "@wordpress/eslint-plugin@24.1.0_@babel+core@7.25.7_eslint@8.57.1_wp-prettier@3.0.3_react@19.2.4_react-dom@19.2.4__react@19.2.4": {
+      "integrity": "sha512-pYFV1XA2uWgryzdTB/IPF8vVO5MsduKIKBEpQFzPhvazZH5Gvc7orVpO5ZGIvkxKbFLNGmYdAUy2Cj0ng+tSdQ==",
+      "dependencies": [
+        "@babel/core",
+        "@babel/eslint-parser",
+        "@typescript-eslint/eslint-plugin",
+        "@typescript-eslint/parser",
+        "@wordpress/babel-preset-default",
+        "@wordpress/prettier-config",
+        "@wordpress/theme@0.6.0_react@19.2.4_react-dom@19.2.4__react@19.2.4",
+        "cosmiconfig@7.1.0",
+        "eslint",
+        "eslint-config-prettier",
+        "eslint-import-resolver-typescript",
+        "eslint-plugin-import",
+        "eslint-plugin-jest",
+        "eslint-plugin-jsdoc",
+        "eslint-plugin-jsx-a11y",
+        "eslint-plugin-playwright",
+        "eslint-plugin-prettier",
+        "eslint-plugin-react",
+        "eslint-plugin-react-hooks",
+        "globals",
+        "prettier@npm:wp-prettier@3.0.3",
+        "requireindex"
+      ],
+      "optionalPeers": [
+        "prettier@npm:wp-prettier@3.0.3"
       ]
     },
     "@wordpress/global-styles-engine@1.6.0_react@19.2.4": {
@@ -4702,7 +4708,7 @@
         "react@19.2.4"
       ]
     },
-    "@wordpress/scripts@31.4.0_@playwright+test@1.58.1_@wordpress+env@10.39.0_react@19.2.4_react-dom@19.2.4__react@19.2.4_react-refresh@0.14.2_webpack@5.104.1__acorn@8.15.0_webpack-dev-server@4.15.2__webpack@5.104.1___acorn@8.15.0__@types+express@4.17.25_@babel+core@7.25.7_eslint@8.57.1_jest@29.7.0_npm-package-json-lint@6.4.0__ajv@6.12.6_postcss@8.5.6_stylelint@16.26.1__@csstools+css-tokenizer@3.0.4__@csstools+css-parser-algorithms@3.0.5___@csstools+css-tokenizer@3.0.4__postcss-selector-parser@7.1.1__postcss@8.5.6_sass@1.97.3": {
+    "@wordpress/scripts@31.4.0_@wordpress+env@10.39.0_react@19.2.4_react-dom@19.2.4__react@19.2.4": {
       "integrity": "sha512-yy69Ef1YvUdBu980WWPgtuRlqCvQVw28BzqWdXcrxVKTBb11H+nX1ovJPLukmPFM6QXc4ku9y89MWAa1ywMA4w==",
       "dependencies": [
         "@babel/core",
@@ -4714,7 +4720,7 @@
         "@wordpress/dependency-extraction-webpack-plugin",
         "@wordpress/e2e-test-utils-playwright",
         "@wordpress/env",
-        "@wordpress/eslint-plugin@24.1.0_@babel+core@7.25.7_eslint@8.57.1_@typescript-eslint+parser@6.21.0__eslint@8.57.1_react@19.2.4_react-dom@19.2.4__react@19.2.4_stylelint@16.26.1__@csstools+css-tokenizer@3.0.4__@csstools+css-parser-algorithms@3.0.5___@csstools+css-tokenizer@3.0.4__postcss-selector-parser@7.1.1__postcss@8.5.6_eslint-plugin-import@2.32.0__eslint@8.57.1_@typescript-eslint+eslint-plugin@6.21.0__@typescript-eslint+parser@6.21.0___eslint@8.57.1__eslint@8.57.1_jest@29.7.0_eslint-plugin-jest@27.9.0__@typescript-eslint+eslint-plugin@6.21.0___@typescript-eslint+parser@6.21.0____eslint@8.57.1___eslint@8.57.1__eslint@8.57.1__jest@29.7.0__@typescript-eslint+parser@6.21.0___eslint@8.57.1_eslint-config-prettier@8.10.2__eslint@8.57.1",
+        "@wordpress/eslint-plugin@24.1.0_@babel+core@7.25.7_eslint@8.57.1_wp-prettier@3.0.3_react@19.2.4_react-dom@19.2.4__react@19.2.4",
         "@wordpress/jest-preset-default",
         "@wordpress/npm-package-json-lint-config",
         "@wordpress/postcss-plugins-preset",
@@ -4790,11 +4796,26 @@
       "integrity": "sha512-+Vy769qVrjnSqCZCMolh5dHu1np+iZKkICQoccgF/VXXjp+dYLJaDzXqbKqtGU87oirUT7Q1tqWNovbuaBowIA==",
       "dependencies": [
         "@stylistic/stylelint-plugin",
-        "@wordpress/theme",
+        "@wordpress/theme@0.6.0_react@19.2.4_react-dom@19.2.4__react@19.2.4_stylelint@16.26.1__@csstools+css-tokenizer@3.0.4__@csstools+css-parser-algorithms@3.0.5___@csstools+css-tokenizer@3.0.4__postcss-selector-parser@7.1.1__postcss@8.5.6",
         "stylelint",
         "stylelint-config-recommended",
         "stylelint-config-recommended-scss",
         "stylelint-scss"
+      ]
+    },
+    "@wordpress/theme@0.6.0_react@19.2.4_react-dom@19.2.4__react@19.2.4": {
+      "integrity": "sha512-n/O1djUn+jny46JyqCwD77nPV4zCUBIn+0ICp8fDYLXpQ7FfCfCrEfhlkQkcVB45KC1iu6IMAsLOA/9hzavHoQ==",
+      "dependencies": [
+        "@wordpress/element",
+        "@wordpress/private-apis",
+        "colorjs.io",
+        "memize",
+        "react@19.2.4",
+        "react-dom@19.2.4_react@19.2.4",
+        "stylelint"
+      ],
+      "optionalPeers": [
+        "stylelint"
       ]
     },
     "@wordpress/theme@0.6.0_react@19.2.4_react-dom@19.2.4__react@19.2.4_stylelint@16.26.1__@csstools+css-tokenizer@3.0.4__@csstools+css-parser-algorithms@3.0.5___@csstools+css-tokenizer@3.0.4__postcss-selector-parser@7.1.1__postcss@8.5.6": {
@@ -4804,8 +4825,6 @@
         "@wordpress/private-apis",
         "colorjs.io",
         "memize",
-        "react@19.2.4",
-        "react-dom@19.2.4_react@19.2.4",
         "stylelint"
       ],
       "optionalPeers": [
@@ -4825,7 +4844,7 @@
         "@wordpress/icons",
         "@wordpress/primitives",
         "@wordpress/private-apis",
-        "@wordpress/theme",
+        "@wordpress/theme@0.6.0_react@19.2.4_react-dom@19.2.4__react@19.2.4",
         "clsx",
         "react@19.2.4",
         "react-dom@19.2.4_react@19.2.4"
@@ -5517,7 +5536,8 @@
       "bin": true
     },
     "basic-ftp@5.1.0": {
-      "integrity": "sha512-RkaJzeJKDbaDWTIPiJwubyljaEPwpVWkm9Rt5h9Nd6h7tEXTJ3VB4qxdZBioV7JO5yLUaOKwz7vDOzlncUsegw=="
+      "integrity": "sha512-RkaJzeJKDbaDWTIPiJwubyljaEPwpVWkm9Rt5h9Nd6h7tEXTJ3VB4qxdZBioV7JO5yLUaOKwz7vDOzlncUsegw==",
+      "deprecated": true
     },
     "batch@0.6.1": {
       "integrity": "sha512-x+VAiMRL6UPkx+kudNvxTl6hB2XNNCG2r+7wixVfIYwu/2HKRXimwQyaumLjMveWvT2Hkd/cAJw+QBMfJ/EKVw=="
@@ -6857,19 +6877,6 @@
         "tsconfig-paths"
       ]
     },
-    "eslint-plugin-jest@27.9.0_@typescript-eslint+eslint-plugin@6.21.0__@typescript-eslint+parser@6.21.0___eslint@8.57.1__eslint@8.57.1_eslint@8.57.1_@typescript-eslint+parser@6.21.0__eslint@8.57.1_jest@29.7.0": {
-      "integrity": "sha512-QIT7FH7fNmd9n4se7FFKHbsLKGQiw885Ds6Y/sxKgCZ6natwCsXdgPOADnYVxN2QrRweF0FZWbJ6S7Rsn7llug==",
-      "dependencies": [
-        "@typescript-eslint/eslint-plugin",
-        "@typescript-eslint/utils@5.62.0_eslint@8.57.1",
-        "eslint",
-        "jest"
-      ],
-      "optionalPeers": [
-        "@typescript-eslint/eslint-plugin",
-        "jest"
-      ]
-    },
     "eslint-plugin-jest@27.9.0_@typescript-eslint+eslint-plugin@6.21.0__@typescript-eslint+parser@6.21.0___eslint@8.57.1__eslint@8.57.1_eslint@8.57.1_jest@29.7.0_@typescript-eslint+parser@6.21.0__eslint@8.57.1": {
       "integrity": "sha512-QIT7FH7fNmd9n4se7FFKHbsLKGQiw885Ds6Y/sxKgCZ6natwCsXdgPOADnYVxN2QrRweF0FZWbJ6S7Rsn7llug==",
       "dependencies": [
@@ -6919,24 +6926,14 @@
         "string.prototype.includes"
       ]
     },
-    "eslint-plugin-playwright@0.15.3_eslint@8.57.1_eslint-plugin-jest@27.9.0__@typescript-eslint+eslint-plugin@6.21.0___@typescript-eslint+parser@6.21.0____eslint@8.57.1___eslint@8.57.1__eslint@8.57.1__@typescript-eslint+parser@6.21.0___eslint@8.57.1__jest@29.7.0_@typescript-eslint+eslint-plugin@6.21.0__@typescript-eslint+parser@6.21.0___eslint@8.57.1__eslint@8.57.1_@typescript-eslint+parser@6.21.0__eslint@8.57.1": {
-      "integrity": "sha512-LQMW5y0DLK5Fnpya7JR1oAYL2/7Y9wDiYw6VZqlKqcRGSgjbVKNqxraphk7ra1U3Bb5EK444xMgUlQPbMg2M1g==",
-      "dependencies": [
-        "eslint",
-        "eslint-plugin-jest@27.9.0_@typescript-eslint+eslint-plugin@6.21.0__@typescript-eslint+parser@6.21.0___eslint@8.57.1__eslint@8.57.1_eslint@8.57.1_@typescript-eslint+parser@6.21.0__eslint@8.57.1_jest@29.7.0"
-      ],
-      "optionalPeers": [
-        "eslint-plugin-jest@27.9.0_@typescript-eslint+eslint-plugin@6.21.0__@typescript-eslint+parser@6.21.0___eslint@8.57.1__eslint@8.57.1_eslint@8.57.1_@typescript-eslint+parser@6.21.0__eslint@8.57.1_jest@29.7.0"
-      ]
-    },
     "eslint-plugin-playwright@0.15.3_eslint@8.57.1_eslint-plugin-jest@27.9.0__@typescript-eslint+eslint-plugin@6.21.0___@typescript-eslint+parser@6.21.0____eslint@8.57.1___eslint@8.57.1__eslint@8.57.1__jest@29.7.0__@typescript-eslint+parser@6.21.0___eslint@8.57.1_@typescript-eslint+eslint-plugin@6.21.0__@typescript-eslint+parser@6.21.0___eslint@8.57.1__eslint@8.57.1_jest@29.7.0_@typescript-eslint+parser@6.21.0__eslint@8.57.1": {
       "integrity": "sha512-LQMW5y0DLK5Fnpya7JR1oAYL2/7Y9wDiYw6VZqlKqcRGSgjbVKNqxraphk7ra1U3Bb5EK444xMgUlQPbMg2M1g==",
       "dependencies": [
         "eslint",
-        "eslint-plugin-jest@27.9.0_@typescript-eslint+eslint-plugin@6.21.0__@typescript-eslint+parser@6.21.0___eslint@8.57.1__eslint@8.57.1_eslint@8.57.1_jest@29.7.0_@typescript-eslint+parser@6.21.0__eslint@8.57.1"
+        "eslint-plugin-jest"
       ],
       "optionalPeers": [
-        "eslint-plugin-jest@27.9.0_@typescript-eslint+eslint-plugin@6.21.0__@typescript-eslint+parser@6.21.0___eslint@8.57.1__eslint@8.57.1_eslint@8.57.1_jest@29.7.0_@typescript-eslint+parser@6.21.0__eslint@8.57.1"
+        "eslint-plugin-jest"
       ]
     },
     "eslint-plugin-prettier@5.5.5_eslint@8.57.1_eslint-config-prettier@8.10.2__eslint@8.57.1_prettier@3.8.1": {
@@ -7599,6 +7596,7 @@
         "package-json-from-dist",
         "path-scurry"
       ],
+      "deprecated": true,
       "bin": true
     },
     "glob@7.2.3": {
@@ -12144,10 +12142,12 @@
     },
     "uuid@8.3.2": {
       "integrity": "sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==",
+      "deprecated": true,
       "bin": true
     },
     "uuid@9.0.1": {
       "integrity": "sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==",
+      "deprecated": true,
       "bin": true
     },
     "v8-to-istanbul@9.3.0": {
@@ -12632,6 +12632,7 @@
     ],
     "packageJson": {
       "dependencies": [
+        "npm:@wordpress/api-fetch@^7.33.0",
         "npm:@wordpress/block-editor@^15.12.0",
         "npm:@wordpress/blocks@^15.12.0",
         "npm:@wordpress/browserslist-config@^6.39.0",

@@ -22,6 +22,7 @@
 
 /* eslint-disable no-console */
 /* eslint-env browser */
+/* global globalThis */
 
 // Check if we're in the WordPress block editor
 function isBlockEditor() {
@@ -99,8 +100,17 @@ function initIpReveal() {
 
 	async function fetchIp() {
 		try {
-			// Use WordPress REST API endpoint
-			const res = await fetch('/wp-json/cdn-error-mockups/v1/client-ip');
+			const apiRoot =
+				globalThis?.wpApiSettings?.root ||
+				`${globalThis.location.origin}/wp-json/`;
+			const endpoint = new URL(
+				'cdn-error-mockups/v1/client-ip',
+				apiRoot
+			).toString();
+			const res = await fetch(endpoint, {
+				credentials: 'same-origin',
+				cache: 'no-store',
+			});
 			if (!res.ok) {
 				return 'Unavailable';
 			}
@@ -122,20 +132,19 @@ function initIpReveal() {
 		}
 
 		if (ipSpan.classList.contains('hidden')) {
-			// 初期状態: IPを表示する
-			// IPがまだ取得されていない場合は取得する
+			// Initial state: reveal IP. Fetch only if not loaded.
 			if (!ipSpan.textContent.trim()) {
 				ipSpan.textContent = '…';
 				const ip = await fetchIp();
 				ipSpan.textContent = ip;
 			}
 			ipSpan.classList.remove('hidden');
-			// IPが表示されたらボタンを非表示にする
+			// Hide button after revealing the IP.
 			btn.classList.add('hidden');
 		} else {
-			// IPが既に表示されている状態: 再び隠す
+			// IP is visible: hide it again.
 			ipSpan.classList.add('hidden');
-			// ボタンを再表示して、再度クリック可能にする
+			// Re-show button so it can be clicked again.
 			btn.classList.remove('hidden');
 		}
 	});

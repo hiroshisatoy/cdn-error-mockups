@@ -5,7 +5,7 @@
  * Description:       Adds a block that mimics the Cloudflare downtime error screen.
  * Requires at least: 6.9
  * Requires PHP:      8.0
- * Version:           1.0.4
+ * Version:           1.1.0
  * Author:            Hiroshi Sato
  * Text Domain:       cdn-error-mockups
  * License:           GPLv2 or later
@@ -67,18 +67,40 @@ add_action( 'init', 'cdn_error_mockups_block_init' );
  * @return string The client IP address or 'Unavailable' if not found.
  */
 function cdn_error_mockups_get_client_ip() {
+	/**
+	 * Validate and normalize IP address from HTTP headers.
+	 *
+	 * @param string $candidate Raw candidate value.
+	 * @return string Valid IP or empty string.
+	 */
+	$validate_ip = static function ( $candidate ) {
+		$candidate = trim( (string) $candidate );
+		return filter_var( $candidate, FILTER_VALIDATE_IP ) ? $candidate : '';
+	};
+
 	// Cloudflare.
 	if ( ! empty( $_SERVER['HTTP_CF_CONNECTING_IP'] ) ) {
-		return sanitize_text_field( wp_unslash( $_SERVER['HTTP_CF_CONNECTING_IP'] ) );
+		$ip = $validate_ip( sanitize_text_field( wp_unslash( $_SERVER['HTTP_CF_CONNECTING_IP'] ) ) );
+		if ( $ip ) {
+			return $ip;
+		}
 	}
 	// Proxy (X-Forwarded-For).
 	if ( ! empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ) {
 		$ips = explode( ',', sanitize_text_field( wp_unslash( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ) );
-		return trim( $ips[0] );
+		foreach ( $ips as $candidate_ip ) {
+			$ip = $validate_ip( $candidate_ip );
+			if ( $ip ) {
+				return $ip;
+			}
+		}
 	}
 	// Standard remote address.
 	if ( ! empty( $_SERVER['REMOTE_ADDR'] ) ) {
-		return sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) );
+		$ip = $validate_ip( sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) );
+		if ( $ip ) {
+			return $ip;
+		}
 	}
 	return 'Unavailable';
 }
@@ -105,9 +127,13 @@ add_action( 'rest_api_init', 'cdn_error_mockups_register_rest_routes' );
  * @return WP_REST_Response
  */
 function cdn_error_mockups_rest_client_ip() {
-	return rest_ensure_response(
+	$response = rest_ensure_response(
 		array(
 			'ip' => cdn_error_mockups_get_client_ip(),
 		)
 	);
+	$response->header( 'Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0' );
+	$response->header( 'Pragma', 'no-cache' );
+	$response->header( 'Expires', '0' );
+	return $response;
 }
